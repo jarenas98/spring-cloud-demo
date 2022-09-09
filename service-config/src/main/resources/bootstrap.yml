@@ -1,13 +1,14 @@
 server:
   port: 8081
-
+  error:
+    include-message: always
 spring:
   cloud:
     config:
       server:
         git:
           uri: https://github.com/jarenas98/spring-cloud-demo.git
-          searchPaths: config-data
+          search-paths: config-data
           username: ${GIT_USER}
           password: ${GIT_PASSWORD}
   security:
