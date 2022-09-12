@@ -1,10 +1,11 @@
 package com.co.example.store.shopping.client;
 
 import com.co.example.store.shopping.model.Customer;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
-@Component
+@Configuration
 public class CustomerHystrixFallbackFactory implements CustomerClient {
     @Override
     public ResponseEntity<Customer> getCustomer(Long customerId) {

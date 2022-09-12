@@ -47,7 +47,16 @@ Feign:
     enabled: true
   
 management:
-  endpoints:
+  endpoint:
+    health:
+      enabled: true 
+      show-details: always
+    jmx:
+      exposure:
+        include: "*"
     web:
       exposure:
-        include: hystrix.stream
+        include: "*" 
+      base-path: "/actuator" 
+      cors:
+        allowed-origins: true 
